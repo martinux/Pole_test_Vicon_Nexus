@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<KinematicModel MODEL="New Pole MM" VERSION="3.2">
+	<Parameters>
+		<Parameter NAME="Pole_Pole1_x" VALUE="0" PRIOR="0" HIDDEN="true"/>
+		<Parameter NAME="Pole_Pole1_y" VALUE="0" PRIOR="0" HIDDEN="true"/>
+		<Parameter NAME="Pole_Pole1_z" VALUE="0" PRIOR="0" HIDDEN="true"/>
+		<Parameter NAME="Pole_Pole2_x" VALUE="-4.4408920985006262e-16" PRIOR="-4.4408920985006262e-16" HIDDEN="true"/>
+		<Parameter NAME="Pole_Pole2_y" VALUE="-7.1054273576010019e-15" PRIOR="-7.1054273576010019e-15" HIDDEN="true"/>
+		<Parameter NAME="Pole_Pole2_z" VALUE="-135.10823059082031" PRIOR="-135.10823059082031" HIDDEN="true"/>
+		<Parameter NAME="Pole_Pole3_x" VALUE="-1.7763568394002505e-15" PRIOR="-1.7763568394002505e-15" HIDDEN="true"/>
+		<Parameter NAME="Pole_Pole3_y" VALUE="1170.2178955078125" PRIOR="1170.2178955078125" HIDDEN="true"/>
+		<Parameter NAME="Pole_Pole3_z" VALUE="8.0404777526855469" PRIOR="8.0404777526855469" HIDDEN="true"/>
+		<Parameter NAME="Pole_Pole4_x" VALUE="1.5365850925445557" PRIOR="1.5365850925445557" HIDDEN="true"/>
+		<Parameter NAME="Pole_Pole4_y" VALUE="1171.5166015625" PRIOR="1171.5166015625" HIDDEN="true"/>
+		<Parameter NAME="Pole_Pole4_z" VALUE="-125.81766510009766" PRIOR="-125.81766510009766" HIDDEN="true"/>
+		<Parameter NAME="Pole_Pole5_x" VALUE="-0.99649906158447266" PRIOR="-0.99649906158447266" HIDDEN="true"/>
+		<Parameter NAME="Pole_Pole5_y" VALUE="25.667280197143555" PRIOR="25.667280197143555" HIDDEN="true"/>
+		<Parameter NAME="Pole_Pole5_z" VALUE="-94.436622619628906" PRIOR="-94.436622619628906" HIDDEN="true"/>
+	</Parameters>
+	<Skeleton>
+		<Segment NAME="Pole" OPACITY="255" BOUNDS="-13.5108232 -13.5108232 -135.108231 13.5108232 13.5108232 0" MASS="0" MASS-CENTRE="0 0 0" INERTIA="0 0 0" RGB="255 164 0" HIDDEN="false" DRAW-END-RATIO="1" DRAW-HEIGHT="0.5" DRAW-TWIST="0" DRAW-WIDTH="0.5" DRAW-STYLE="box" DRAW-SHADING="shaded-smooth">
+			<JointFree NAME="World_Pole" PRE-ORIENTATION="0 0 0" PRE-POSITION="0 0 0" INVERSE-POST-ORIENTATION="0 0 0" INVERSE-POST-POSITION="0 0 0" MEAN="0 0 0 0 0 0" COVARIANCE="2.464900016784668 0 0 0 0 0 0 2.464900016784668 0 0 0 0 0 0 246.49000549316406 0 0 0 0 0 0 1000000 0 0 0 0 0 0 1000000 0 0 0 0 0 0 1000000" T="* * * * * *" SIGNS="+ + + + + +" RANGE-CENTRING-STATE="0 0 0 0 0 0" RANGE-MATRIX="29.60881233215332 0 0 0 0 0 0 29.60881233215332 0 0 0 0 0 0 29.60881233215332 0 0 0 0 0 0 100000000 0 0 0 0 0 0 100000000 0 0 0 0 0 0 100000000">
+				<JointTemplate MEAN="0 0 0 0 0 0" COVARIANCE="2.464900016784668 0 0 0 0 0 0 2.464900016784668 0 0 0 0 0 0 246.49000549316406 0 0 0 0 0 0 1000000 0 0 0 0 0 0 1000000 0 0 0 0 0 0 1000000" TPOSE-MEAN="0 0 0 0 0 0" TPOSE-COVARIANCE="0.10000000149011612 0 0 0 0 0 0 0.10000000149011612 0 0 0 0 0 0 0.10000000149011612 0 0 0 0 0 0 0.10000000149011612 0 0 0 0 0 0 0.10000000149011612 0 0 0 0 0 0 0.10000000149011612" PRE-ORIENTATION="0 0 0" PRE-POSITION="0 0 0" INVERSE-POST-ORIENTATION="0 0 0" INVERSE-POST-POSITION="0 0 0"/>
+			</JointFree>
+		</Segment>
+	</Skeleton>
+	<MarkerSet>
+		<Markers>
+			<Marker NAME="Pole1" RADIUS="12.5" RGB="255 164 0" STATUS="required" VIEW-ANGLE="0"/>
+			<Marker NAME="Pole2" RADIUS="12.5" RGB="0 255 0" STATUS="required" VIEW-ANGLE="0"/>
+			<Marker NAME="Pole3" RADIUS="12.5" RGB="170 0 255" STATUS="required" VIEW-ANGLE="0"/>
+			<Marker NAME="Pole4" RADIUS="12.5" RGB="85 255 255" STATUS="optional" VIEW-ANGLE="0"/>
+			<Marker NAME="Pole5" RADIUS="12.5" RGB="255 164 0" STATUS="optional" VIEW-ANGLE="0"/>
+		</Markers>
+		<Sticks>
+			<Stick MARKER1="Pole1" MARKER2="Pole2" RGB1="0 255 0" RGB2="0 255 0"/>
+			<Stick MARKER1="Pole1" MARKER2="Pole3" RGB1="170 0 255" RGB2="170 0 255"/>
+			<Stick MARKER1="Pole1" MARKER2="Pole5" RGB1="255 164 0" RGB2="255 164 0"/>
+			<Stick MARKER1="Pole2" MARKER2="Pole4" RGB1="85 255 255" RGB2="85 255 255"/>
+			<Stick MARKER1="Pole2" MARKER2="Pole5" RGB1="0 255 0" RGB2="0 255 0"/>
+			<Stick MARKER1="Pole3" MARKER2="Pole4" RGB1="85 255 255" RGB2="85 255 255"/>
+		</Sticks>
+	</MarkerSet>
+	<TargetSet>
+		<Targets>
+			<TargetLocalPointToWorldPoint COVARIANCE="1 0 0 0 1 0 0 0 1" FILL-GAPS="false" GAUSSIAN="true" HIDDEN="false" MARKER="Pole1" OPACITY="255" POSITION="'Pole_Pole1_x' 'Pole_Pole1_y' 'Pole_Pole1_z'" RGB="93 93 93" SEGMENT="Pole" WEIGHT="1" DRAW-STYLE="None">
+				<TargetLocalPointToWorldPointTemplate COVARIANCE="1 0 0 0 1 0 0 0 1"/>
+			</TargetLocalPointToWorldPoint>
+			<TargetLocalPointToWorldPoint COVARIANCE="1 0 0 0 1 0 0 0 1" FILL-GAPS="false" GAUSSIAN="true" HIDDEN="false" MARKER="Pole2" OPACITY="255" POSITION="'Pole_Pole2_x' 'Pole_Pole2_y' 'Pole_Pole2_z'" RGB="93 93 93" SEGMENT="Pole" WEIGHT="1" DRAW-STYLE="None">
+				<TargetLocalPointToWorldPointTemplate COVARIANCE="1 0 0 0 1 0 0 0 1"/>
+			</TargetLocalPointToWorldPoint>
+			<TargetLocalPointToWorldPoint COVARIANCE="1 0 0 0 1 0 0 0 1" FILL-GAPS="false" GAUSSIAN="true" HIDDEN="false" MARKER="Pole3" OPACITY="255" POSITION="'Pole_Pole3_x' 'Pole_Pole3_y' 'Pole_Pole3_z'" RGB="93 93 93" SEGMENT="Pole" WEIGHT="1" DRAW-STYLE="None">
+				<TargetLocalPointToWorldPointTemplate COVARIANCE="1 0 0 0 1 0 0 0 1"/>
+			</TargetLocalPointToWorldPoint>
+			<TargetLocalPointToWorldPoint COVARIANCE="1 0 0 0 1 0 0 0 1" FILL-GAPS="false" GAUSSIAN="true" HIDDEN="false" MARKER="Pole4" OPACITY="255" POSITION="'Pole_Pole4_x' 'Pole_Pole4_y' 'Pole_Pole4_z'" RGB="93 93 93" SEGMENT="Pole" WEIGHT="1" DRAW-STYLE="None">
+				<TargetLocalPointToWorldPointTemplate COVARIANCE="1 0 0 0 1 0 0 0 1"/>
+			</TargetLocalPointToWorldPoint>
+			<TargetLocalPointToWorldPoint COVARIANCE="1 0 0 0 1 0 0 0 1" FILL-GAPS="false" GAUSSIAN="true" HIDDEN="false" MARKER="Pole5" OPACITY="255" POSITION="'Pole_Pole5_x' 'Pole_Pole5_y' 'Pole_Pole5_z'" RGB="93 93 93" SEGMENT="Pole" WEIGHT="1" DRAW-STYLE="None">
+				<TargetLocalPointToWorldPointTemplate COVARIANCE="1 0 0 0 1 0 0 0 1"/>
+			</TargetLocalPointToWorldPoint>
+		</Targets>
+	</TargetSet>
+</KinematicModel>
+
