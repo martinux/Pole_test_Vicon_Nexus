@@ -1,0 +1,15 @@
+!MKR#2
+[Display]
+Pole1
+Pole2
+Pole3
+Pole4
+Pole5
+
+Pole1,Pole2
+Pole1,Pole3
+Pole1,Pole5
+Pole2,Pole4
+Pole2,Pole5
+Pole3,Pole4
+
